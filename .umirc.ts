@@ -9,6 +9,14 @@ export default defineConfig({
   layout: {
     title: '@umijs/max',
   },
+  plugins: [
+    require.resolve('@alita/plugins/dist/keepalive'),
+    require.resolve('@alita/plugins/dist/tabs-layout'),
+  ],
+  keepalive: [/./],
+  tabsLayout: {
+    hasCustomTabs: true,
+  },
   routes: [
     {
       path: '/',
